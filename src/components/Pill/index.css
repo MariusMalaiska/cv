@@ -1,0 +1,13 @@
+.Pill {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 13px 0px 13px;
+  font-weight: 600;
+  /* background: var(--green); */
+  border-radius: 11px;
+}
+
+.Pill p {
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+.BlackLine {
+  color: white;
+  text-align: center;
+  background-color: var(--black);
+  padding: 2px;
+  margin-bottom: 80px;
+  width: 200px;
+}

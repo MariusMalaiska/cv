@@ -6,6 +6,13 @@ import git from "./logo/logo2.svg";
 import tweet from "./logo/logo4.svg";
 import "./App.css";
 
+// import Title from "./components/Title";
+import ContentBlock from "./components/ContentBlock";
+import BlackLine from "./components/BlackLine";
+import BorderBox from "./components/BorderBox";
+import SeparatorClear from "./components/SeparatorClear";
+import Pill from "./components/Pill";
+
 function App() {
   return (
     <div className="App">
@@ -13,25 +20,11 @@ function App() {
         <div className="Top-line"></div>
         <header className="App-header">
           <h1 className="Name">Marius Malaiška</h1>
-          <h2 className="Black-line">Programer</h2>
-          {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+          <BlackLine className="" title="Programer"></BlackLine>
         </header>
         <div className="cv">
           <div className="About">
-            <div className="About-links box">
-              <h1 className="Sub-title">Links</h1>
-              <div className="Sub-line"></div>
+            <ContentBlock className="flex-1 links" title="Links">
               <ul>
                 <li>
                   <img src={linkedin}></img>
@@ -50,83 +43,107 @@ function App() {
                   <a>BLOG</a>
                 </li>
               </ul>
-            </div>
-            <div className="About-me box">
-              <h1 className="Sub-title">About Me</h1>
-              <div className="Sub-line"></div>
-              <p>
-                React components implement a render() method that takes input
-                data and returns what to display. This example uses an XML-like
-                syntax called JSX. Input data that is passed into the component
-                can be accessed by render() via this.props. JSX is optional and
-                not required to use React. Try the Babel REPL to see the raw
-                JavaScript code produced by the JSX compilation step. LIVE JSX
-                EDITOR JSX? class HelloMessage extends React.Component
-                document.getElementById('hello-example') ); RESULT Hello Taylor
-              </p>
-            </div>
+            </ContentBlock>
+            <ContentBlock className="flex-2" title="About Me">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              ut justo libero. Vestibulum vitae mattis diam. Vivamus eleifend
+              diam vel tempor lacinia. Suspendisse non augue egestas, dapibus
+              justo et, lobortis ex. Nullam tortor diam, venenatis at enim a,
+              lacinia porttitor erat. Vivamus tempor dictum leo id aliquam.
+              Praesent elit lacus, tempus ac vehicula in, imperdiet dapibus
+              elit. Nullam scelerisque euismod leo id vestibulum. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Maecenas ut justo
+              libero. Vestibulum vitae mattis diam.
+            </ContentBlock>
           </div>
           <div className="Skills">
-            <div className="education box">
-              <h1 className="Sub-title">Education</h1>
-              <div className="Sub-line"></div>
+            <ContentBlock className="flex-1 education" title="EDUCATION">
               <ul>
                 <li>
-                  <span>School name</span>
+                  <span>Code Academy</span>
                 </li>
                 <li>
-                  <span>2009-20013</span>
+                  <span>2019-2020</span>
+                </li>
+                <li>
+                  <span>Front-end</span>
+                </li>
+              </ul>
+
+              <SeparatorClear />
+              <ul>
+                <li>
+                  <span>Vilniaus turizmo ir prekybos verslo mokykla</span>
+                </li>
+                <li>
+                  <span>2009-2011</span>
                 </li>
                 <li>
                   {" "}
-                  <span>Degree</span>
+                  <span>Virėjas</span>
                 </li>
               </ul>
-              <div className="line"></div>
+              <SeparatorClear />
               <ul>
                 <li>
-                  <span>School name</span>
+                  <span>Vilniaus Jono Basanavičiaus gimnazija</span>
                 </li>
                 <li>
-                  <span>2009-20013</span>
+                  <span>1997-2009</span>
                 </li>
                 <li>
                   {" "}
-                  <span>Degree</span>
+                  <span>Vidurinis</span>
                 </li>
               </ul>
-            </div>
-            <div className="Skills-personal box">
-              <h1 className="Sub-title">PERSONAL SKILLS</h1>
-              <div className="Sub-line"></div>
+            </ContentBlock>
+            <ContentBlock className="flex-1 education" title="PERSONAL SKILLS">
               <ul>
-                <li className="team-work">TEAMWORK</li>
-                <li className="Comunication">COMUNICTION</li>
-                <li className="Organisation">ORGANISATION</li>
+                <li>
+                  <Pill className="Team-work" title="TEAMWORK" />
+                </li>
+                <li>
+                  <Pill className="Comunication" title="COMUNICTION" />
+                </li>
+                <li>
+                  <Pill className="Organisation" title="ORGANISATION" />{" "}
+                </li>
               </ul>
-            </div>
-            <div className="Skills-technikal box">
-              <h1 className="Sub-title">TECHNIKAL SKILLS</h1>
-              <div className="Sub-line"></div>
+            </ContentBlock>
+
+            <ContentBlock
+              className="flex-1 Skills-technikal"
+              title="TECHNIKAL SKILLS"
+            >
               <ul>
-                <li className="Html">HTML</li>
-                <li className="Css">CSS/SCSS</li>
-                <li className="Javascript">JAVASCRIPT</li>
-                <li className="React">REACT.JS</li>
+                <li>
+                  <Pill className="Html" title="HTML" />
+                </li>
+                <li>
+                  <Pill className="Css" title="CSS/SCSS" />
+                </li>
+                <li>
+                  <Pill className="Javascript" title="Javascript" />
+                </li>
+                <li>
+                  <Pill className="React" title="REACT.JS" />
+                </li>
               </ul>
-            </div>
+            </ContentBlock>
           </div>
           <div className="Work">
             <div>
-              <h1 className="Work-experience">WORK EXPERIENCE</h1>
-              <div className="Sub-line"></div>
+              <ContentBlock
+                className="flex-1 Work-experience"
+                title="WORK EXPERIENCE"
+              ></ContentBlock>
             </div>
             <div className="Jobs">
-              <div className="Job-position Job-one box">
+              <BorderBox className="flex-1 Job-position">
                 <h2 className="Job-position-one">JOB POSITION</h2>
                 <p> React components</p>
                 <p> 2008 - components</p>
-                <p className="Text-left box">
+                <p className="Text-left">
                   React components implement a render() method that takes input
                   data and returns what to display. This example uses an
                   XML-like syntax called JSX. Input data that is passed into the
@@ -136,8 +153,9 @@ function App() {
                   <li>raw JavaScript</li>
                   <li>raw JavaScript</li>
                 </ul>
-              </div>
-              <div className="Job-position Job-two box">
+              </BorderBox>
+              {/* </div> */}
+              <BorderBox className="flex-1 Job-position Job-two">
                 <h2 className="Job-position-two">JOB POSITION</h2>
                 <p> React components</p>
                 <p> 2008 - components</p>
@@ -153,8 +171,8 @@ function App() {
                   <li>raw JavaScript</li>
                   <li>raw JavaScript</li>
                 </ul>
-              </div>
-              <div className="Job-position Job-three box">
+              </BorderBox>
+              <BorderBox className="flex-1 Job-position">
                 <h2 className="Job-position-three">JOB POSITION</h2>
                 <p> React components</p>
                 <p> 2008 - components</p>
@@ -169,9 +187,9 @@ function App() {
                   <li>raw JavaScript</li>
                   <li>raw JavaScript</li>
                 </ul>
-              </div>
+              </BorderBox>
             </div>
-            <div className="line"></div>
+            <SeparatorClear />
           </div>
           <div className="Contacts">
             <div className="Adress box">
